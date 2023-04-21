@@ -1,0 +1,192 @@
+body {
+  /* background-color: rgb(179, 231, 231); */
+  background-color: #14213d;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 20px 0;
+}
+#card {
+  padding: 15px;
+  height: 255px;
+  width: 470px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: #50a3a4;
+}
+.background {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  background-color: #fca311;
+}
+#outputNama {
+  margin-top: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+#outputProfesi {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: -30px;
+}
+p {
+  display: inline-block;
+}
+.nyatuin {
+  display: inline-block;
+  margin-left: 8px;
+}
+.boxing {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  margin: 40px 170px;
+  opacity: 30%;
+  background-image: linear-gradient(
+    rgba(101, 38, 153, 0.205),
+    rgba(54, 35, 85, 0.556)
+  );
+}
+.boxing2 {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 150px;
+  margin: 30px 340px;
+  opacity: 40%;
+  background-color: #25587c;
+}
+.boxing3 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #122f50;
+  border-radius: 150px;
+  margin: 180px 140px;
+  opacity: 40%;
+}
+.bintang {
+  position: absolute;
+  margin: 200px 100px;
+  opacity: 30%;
+}
+.bintang2 {
+  position: absolute;
+  margin: 50px 150px;
+  opacity: 30%;
+}
+#outputAlamat {
+  font-style: italic;
+}
+
+.formdanhasil {
+  margin-top: 1vh;
+  margin-left: 25px;
+}
+
+.kartunama {
+  padding-left: 3vh;
+  padding-right: 5px;
+}
+
+.pertombolan {
+  display: flex;
+}
+
+.tombol {
+  margin: 0 5px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: 1px solid #14213d;
+  background-color: white;
+}
+
+.tombol:hover {
+  animation: tombs 0.3s forwards;
+}
+
+@media only screen and (max-width: 990px) {
+  .kartunama {
+    margin-top: 20px;
+    padding: 0;
+  }
+  .formdanhasil {
+    margin: 0;
+  }
+}
+
+@keyframes exa {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes tombs {
+  0% {
+    background-color: white;
+    color: black;
+  }
+  100% {
+    background-color: #14213d;
+    color: white;
+    border: 1px solid #ccc;
+  }
+}
+
+.kartunama:hover {
+  -webkit-animation: exa 0.2s forwards;
+  animation: exa 0.2s forwards;
+}
+
+.form-control {
+  background-color: rgb(231, 231, 231);
+}
+
+input:focus {
+  background-color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.footah {
+  margin-top: 120px;
+  margin-left: 40%;
+  bottom: 0;
+}
+.footahchild {
+  color: #fca311;
+}
+
+.namaku {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.namaku:hover {
+  animation: namakustyle 0.5s forwards;
+}
+
+@keyframes namakustyle {
+  0% {
+    color: #ccc;
+  }
+  100% {
+    color: #fca311;
+    margin: 1px;
+  }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Card</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 style="color: #ccc; padding: 5vh">Name Card Designer</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid formdanhasil">
+      <div class="col-sm-12 col-md-6 background">
+        <form id="cardInfo" class="form-horizontal">
+          <div class="form-group">
+            <label for="namaMu" class="col-sm-3 control-label"
+              >Nama Anda:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="namaMu"
+                onkeyup="printNama()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="profesiMu" class="col-sm-3 control-label"
+              >Profesi Anda:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="profesiMu"
+                onkeyup="printProfesi()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bgKartu" class="col-sm-3 control-label"
+              >Warna Background:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="color"
+                class="form-control"
+                value="#222ccc"
+                id="bgKartu"
+                onchange="warnaBg()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="warnaText" class="col-sm-3 control-label"
+              >Warna Text:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="color"
+                value="#22c12c"
+                class="form-control"
+                id="warnaTexts"
+                onchange="warnaTeks()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="warnaText" class="col-sm-3 control-label"
+              >Susunan Text:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="button"
+                style="color: #14213d"
+                value="Rata Kiri"
+                class="btn btn-info"
+                id="text-left"
+                onclick="textAlign(this.id)"
+              />
+              <input
+                type="button"
+                style="color: #14213d"
+                value="Tengah"
+                class="btn btn-info"
+                id="text-center"
+                onclick="textAlign(this.id)"
+              />
+              <input
+                type="button"
+                value="Rata Kanan"
+                style="color: #14213d"
+                class="btn btn-info"
+                id="text-right"
+                onclick="textAlign(this.id)"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="telponMu" class="col-sm-3 control-label"
+              >Nomor Telephone:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="number"
+                class="form-control"
+                id="telponMu"
+                onkeyup="printTelpon()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="emailMu" class="col-sm-3 control-label"
+              >Alamat Email:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="emailMu"
+                onkeyup="printEmail()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="webMu" class="col-sm-3 control-label"
+              >Website Anda:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="webMu"
+                onkeyup="printWeb()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="alamatMu" class="col-sm-3 control-label"
+              >Alamat Rumah:
+            </label>
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="alamatMu"
+                onkeyup="printAlamat()"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-3 col-sm-offset-3 pertombolan">
+              <input
+                class="tombol"
+                type="button"
+                value="Reset!"
+                onclick="formReset()"
+              />
+              <input
+                class="tombol"
+                type="button"
+                value="Screenshot!"
+                onclick="formSubmit()"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-sm-offset-3 col-md-offset-0 kartunama">
+        <div><h4 style="color: #ccc; font-weight: bold">Result:</h4></div>
+        <div class="fa fa-star bintang"></div>
+        <div class="fa fa-star bintang2"></div>
+        <div id="card">
+          <div class="boxing"></div>
+          <div class="boxing2"></div>
+          <div class="boxing3"></div>
+          <h3 id="outputNama">Nama Anda</h3>
+          <p id="outputProfesi">Profesi Anda</p>
+          <hr />
+          <i class="fa-solid fa-square-phone iconleft"></i>
+          <div class="nyatuin"><p id="outputTelpon">Nomor Telepon Anda</p></div>
+          <br />
+          <i class="fa-solid fa-envelope iconleft"></i>
+          <div class="nyatuin"><p id="outputEmail">Email</p></div>
+          <br />
+          <i class="fa-solid fa-globe"></i>
+          <div class="nyatuin"><p id="outputWeb">Website Anda</p></div>
+          <br />
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="nyatuin"><p id="outputAlamat">Alamat Anda</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 footah">
+      <p class="footahchild">
+        Simple name-card creation by
+        <span class="namaku">Yonathan Simbolon</span>
+      </p>
+      <br />
+      <p class="row" style="margin-left: 110px; color: #fca311">26 June 2022</p>
+    </div>
+  </body>
+</html>
